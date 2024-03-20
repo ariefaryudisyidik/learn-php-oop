@@ -15,6 +15,20 @@ require_once 'App/init.php';
 use App\Produk\User as ProdukUser;
 use App\Service\User as ServiceUser;
 
-new ServiceUser();
-echo '<br>';
-new ProdukUser();
+function callProdukUser(ProdukUser $user)
+{
+    return $user;
+}
+
+function callServiceUser(ServiceUser $user)
+{
+    return $user;
+}
+
+// Instantiate objects
+$produkUser = new ProdukUser();
+$serviceUser = new ServiceUser();
+
+// Call functions
+echo callProdukUser($produkUser)."<br>";
+echo callServiceUser($serviceUser);
