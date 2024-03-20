@@ -19,7 +19,7 @@ class Game extends Produk implements InfoProduk
 
     public function getInfoProduk()
     {
-        $str = "Game: ".$this->getInfo()." ~ {$this->waktuMain} Jam.";
+        $str = 'Game: '.$this->getInfo()." ~ {$this->waktuMain} Jam.";
 
         return $str;
     }

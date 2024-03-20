@@ -20,7 +20,7 @@ class Contoh
 
     public function halo()
     {
-        return "Halo ".self::$angka++." kali. <br>";
+        return 'Halo '.self::$angka++.' kali. <br>';
     }
 }
 

@@ -2,7 +2,16 @@
 
 class Produk
 {
-    private $judul, $penulis, $penerbit, $harga, $diskon = 0;
+    private $judul;
+
+    private $penulis;
+
+    private $penerbit;
+
+    private $harga;
+
+    private $diskon = 0;
+
     public function __construct($judul = 'judul', $penulis = 'penulis', $penerbit = 'penerbit', $harga = 0)
     {
         $this->judul = $judul;
@@ -83,9 +92,10 @@ class Komik extends Produk
         parent::__construct($judul, $penulis, $penerbit, $harga);
         $this->jmlHalaman = $jmlHalaman;
     }
+
     public function getInfoProduk()
     {
-        $str = "Komik: ".parent::getInfoProduk()." - {$this->jmlHalaman} Halaman.";
+        $str = 'Komik: '.parent::getInfoProduk()." - {$this->jmlHalaman} Halaman.";
 
         return $str;
     }
@@ -100,9 +110,10 @@ class Game extends Produk
         parent::__construct($judul, $penulis, $penerbit, $harga);
         $this->waktuMain = $waktuMain;
     }
+
     public function getInfoProduk()
     {
-        $str = "Game: ".parent::getInfoProduk()." ~ {$this->waktuMain} Jam.";
+        $str = 'Game: '.parent::getInfoProduk()." ~ {$this->waktuMain} Jam.";
 
         return $str;
     }

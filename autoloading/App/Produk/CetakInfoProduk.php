@@ -11,7 +11,7 @@ class CetakInfoProduk
 
     public function cetak()
     {
-        $str = "Daftar Produk: <br>";
+        $str = 'Daftar Produk: <br>';
 
         foreach ($this->daftarProduk as $p) {
             $str .= "- {$p->getInfoProduk()} <br>";

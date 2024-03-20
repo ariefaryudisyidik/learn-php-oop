@@ -1,4 +1,5 @@
 <?php
+
 // define('NAMA', 'Arief Aryudi Syidik'); // Disimpan di luar class (Global)
 // echo NAMA.'<br>';
 
@@ -26,7 +27,6 @@ echo coba();
 class Coba
 {
     public $kelas = 'CLASS: '.__CLASS__.'<br>';
-
 }
 
 $obj = new Coba;

@@ -2,7 +2,16 @@
 
 abstract class Produk
 {
-    protected $judul, $penulis, $penerbit, $harga, $diskon = 0;
+    protected $judul;
+
+    protected $penulis;
+
+    protected $penerbit;
+
+    protected $harga;
+
+    protected $diskon = 0;
+
     public function __construct($judul = 'judul', $penulis = 'penulis', $penerbit = 'penerbit', $harga = 0)
     {
         $this->judul = $judul;
@@ -10,6 +19,7 @@ abstract class Produk
         $this->penerbit = $penerbit;
         $this->harga = $harga;
     }
+
     abstract public function getInfo();
 
     public function getLabel()

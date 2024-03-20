@@ -2,10 +2,13 @@
 
 class Produk
 {
-    public $judul = 'judul',
-    $penulis = 'penulis',
-    $penerbit = 'penerbit',
-    $harga = 0;
+    public $judul = 'judul';
+
+    public $penulis = 'penulis';
+
+    public $penerbit = 'penerbit';
+
+    public $harga = 0;
 
     public function getLabel()
     {

@@ -2,7 +2,16 @@
 
 abstract class Produk
 {
-    private $judul, $penulis, $penerbit, $harga, $diskon = 0;
+    private $judul;
+
+    private $penulis;
+
+    private $penerbit;
+
+    private $harga;
+
+    private $diskon = 0;
+
     public function __construct($judul = 'judul', $penulis = 'penulis', $penerbit = 'penerbit', $harga = 0)
     {
         $this->judul = $judul;
@@ -85,9 +94,10 @@ class Komik extends Produk
         parent::__construct($judul, $penulis, $penerbit, $harga);
         $this->jmlHalaman = $jmlHalaman;
     }
+
     public function getInfoProduk()
     {
-        $str = "Komik: ".$this->getInfo()." - {$this->jmlHalaman} Halaman.";
+        $str = 'Komik: '.$this->getInfo()." - {$this->jmlHalaman} Halaman.";
 
         return $str;
     }
@@ -102,9 +112,10 @@ class Game extends Produk
         parent::__construct($judul, $penulis, $penerbit, $harga);
         $this->waktuMain = $waktuMain;
     }
+
     public function getInfoProduk()
     {
-        $str = "Game: ".$this->getInfo()." ~ {$this->waktuMain} Jam.";
+        $str = 'Game: '.$this->getInfo()." ~ {$this->waktuMain} Jam.";
 
         return $str;
     }
@@ -121,7 +132,7 @@ class CetakInfoProduk
 
     public function cetak()
     {
-        $str = "Daftar Produk: <br>";
+        $str = 'Daftar Produk: <br>';
 
         foreach ($this->daftarProduk as $p) {
             $str .= "- {$p->getInfoProduk()} <br>";

@@ -7,7 +7,16 @@ interface InfoProduk
 
 abstract class Produk
 {
-    protected $judul, $penulis, $penerbit, $harga, $diskon = 0;
+    protected $judul;
+
+    protected $penulis;
+
+    protected $penerbit;
+
+    protected $harga;
+
+    protected $diskon = 0;
+
     public function __construct($judul = 'judul', $penulis = 'penulis', $penerbit = 'penerbit', $harga = 0)
     {
         $this->judul = $judul;
@@ -15,6 +24,7 @@ abstract class Produk
         $this->penerbit = $penerbit;
         $this->harga = $harga;
     }
+
     abstract public function getInfo();
 
     public function getLabel()
@@ -92,7 +102,7 @@ class Komik extends Produk implements InfoProduk
 
     public function getInfoProduk()
     {
-        $str = "Komik: ".$this->getInfo()." - {$this->jmlHalaman} Halaman.";
+        $str = 'Komik: '.$this->getInfo()." - {$this->jmlHalaman} Halaman.";
 
         return $str;
     }
@@ -117,7 +127,7 @@ class Game extends Produk implements InfoProduk
 
     public function getInfoProduk()
     {
-        $str = "Game: ".$this->getInfo()." ~ {$this->waktuMain} Jam.";
+        $str = 'Game: '.$this->getInfo()." ~ {$this->waktuMain} Jam.";
 
         return $str;
     }
@@ -134,7 +144,7 @@ class CetakInfoProduk
 
     public function cetak()
     {
-        $str = "Daftar Produk: <br>";
+        $str = 'Daftar Produk: <br>';
 
         foreach ($this->daftarProduk as $p) {
             $str .= "- {$p->getInfoProduk()} <br>";

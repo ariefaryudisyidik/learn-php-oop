@@ -2,7 +2,17 @@
 
 class Produk
 {
-    public $judul, $penulis, $penerbit, $harga, $jmlHalaman, $waktuMain;
+    public $judul;
+
+    public $penulis;
+
+    public $penerbit;
+
+    public $harga;
+
+    public $jmlHalaman;
+
+    public $waktuMain;
 
     public function __construct($judul = 'judul', $penulis = 'penulis', $penerbit = 'penerbit', $harga = 0, $jmlHalaman = 0, $waktuMain = 0)
     {

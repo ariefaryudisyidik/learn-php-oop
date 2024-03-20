@@ -2,7 +2,6 @@
 
 class Tried
 {
-
 }
 
 // Create object instance of class
