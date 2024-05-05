@@ -6,7 +6,7 @@
 4. Constructor
 5. Object Type
 6. Inheritance (Bagian 1)
-7. Inhertiance (Bagian 2)
+7. Inheritance (Bagian 2)
 8. Overriding
 9. Visibility
 10. Setter dan Getter
